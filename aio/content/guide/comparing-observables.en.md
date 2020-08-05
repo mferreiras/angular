@@ -1,24 +1,25 @@
-# Observables en comparación con otras técnicas
+# Observables compared to other techniques
 
-A menudo puedes usar observables en lugar de promesas para entregar valores de forma asíncrona. Del mismo modo, los observables pueden reemplazar a los controladores de eventos. Finalmente, porque los observables entregan múltiples valores, puedes usarlos donde de otro modo podrías construir y operar con arrays.
+You can often use observables instead of promises to deliver values asynchronously. Similarly, observables can take the place of event handlers. Finally, because observables deliver multiple values, you can use them where you might otherwise build and operate on arrays.
 
-Los observables se comportan de manera algo diferente a las técnicas alternativas en cada una de estas situaciones, pero ofrecen algunas ventajas significativas. Aquí hay comparaciones detalladas de las diferencias.
+Observables behave somewhat differently from the alternative techniques in each of these situations, but offer some significant advantages. Here are detailed comparisons of the differences.
 
-## Observables en comparación con promesas
+## Observables compared to promises
 
-Los observables a menudo se comparan con las promesas. Aquí hay algunas diferencias clave:
+Observables are often compared to promises. Here are some key differences:
 
-* Los observables son declarativos; La ejecución no comienza hasta la suscripción. Las promesas se ejecutan inmediatamente después de la creación. Esto hace que los observables sean útiles para definir recetas que se pueden ejecutar cuando necesites el resultado.
+* Observables are declarative; computation does not start until subscription. Promises execute immediately on creation. This makes observables useful for defining recipes that can be run whenever you need the result.
 
-* Los observables proporcionan muchos valores. Las promesas proporcionan un valor. Esto hace que los observables sean útiles para obtener múltiples valores a lo largo del tiempo.
+* Observables provide many values. Promises provide one. This makes observables useful for getting multiple values over time.
 
-* Los observables diferencian entre encadenamiento y suscripción. Las promesas solo tienen cláusulas `.then ()`. Esto hace que los observables sean útiles para crear recetas de transformación complejas para ser utilizadas por otra parte del sistema, sin que el trabajo se ejecute.
+* Observables differentiate between chaining and subscription. Promises only have `.then()` clauses. This makes observables useful for creating complex transformation recipes to be used by other part of the system, without causing the work to be executed.
 
-* Observables `subscribe()` es responsable de manejar los errores. Las promesas empujan los errores a promesas hijas. Esto hace que los observables sean útiles para el manejo centralizado y predecible de errores.
+* Observables `subscribe()` is responsible for handling errors. Promises push errors to the child promises. This makes observables useful for centralized and predictable error handling.
 
-### Creación y suscripción
 
-* Los observables no se ejecutan hasta que un consumidor se suscribe. El `subscribe()` ejecuta el comportamiento definido una vez, y se puede volver a llamar. Cada suscripción tiene su propia computación. La resuscripción provoca la recomputación de los valores.
+### Creation and subscription
+
+* Observables are not executed until a consumer subscribes. The `subscribe()` executes the defined behavior once, and it can be called again. Each subscription has its own computation. Resubscription causes recomputation of values.
 
   <code-example 
     path="comparing-observables/src/observables.ts" 
@@ -26,7 +27,7 @@ Los observables a menudo se comparan con las promesas. Aquí hay algunas diferen
     region="observable">
   </code-example>
 
-* Las promesas se ejecutan de inmediato, y solo una vez. La computación del resultado se inicia cuando se crea la promesa. No hay forma de reiniciar el trabajo. Todas las cláusulas `then` (suscripciones) comparten la misma computación.
+* Promises execute immediately, and just once. The computation of the result is initiated when the promise is created. There is no way to restart work. All `then` clauses (subscriptions) share the same computation.
 
   <code-example 
     path="comparing-observables/src/promises.ts" 
@@ -34,9 +35,9 @@ Los observables a menudo se comparan con las promesas. Aquí hay algunas diferen
     region="promise">
   </code-example>
 
-### Encadenamiento
+### Chaining
 
-* Los observables diferencian entre la función de transformación, como `map` y `subscription`. Solo la suscripción activa la función de suscriptor para comenzar a calcular los valores.
+* Observables differentiate between transformation function such as a map and subscription. Only subscription activates the subscriber function to start computing the values.
 
   <code-example 
     path="comparing-observables/src/observables.ts" 
@@ -44,7 +45,7 @@ Los observables a menudo se comparan con las promesas. Aquí hay algunas diferen
     region="chain">
   </code-example>
 
-* Las promesas no diferencian entre las últimas cláusulas `.then` (equivalentes al subscription) y las cláusulas intermedias `.then` (equivalentes al map).
+* Promises do not differentiate between the last `.then` clauses (equivalent to subscription) and intermediate `.then` clauses (equivalent to map).
 
   <code-example 
     path="comparing-observables/src/promises.ts"
@@ -52,9 +53,9 @@ Los observables a menudo se comparan con las promesas. Aquí hay algunas diferen
     region="chain">
   </code-example>
 
-### Cancelación
+### Cancellation
 
-* Las suscripciones de los observables son cancelables. La cancelación de la suscripción evita que el oyente reciba más valores y notifica a la función del suscriptor que cancele el trabajo.
+* Observable subscriptions are cancellable. Unsubscribing removes the listener from receiving further values, and notifies the subscriber function to cancel work.
 
   <code-example 
     path="comparing-observables/src/observables.ts" 
@@ -62,11 +63,11 @@ Los observables a menudo se comparan con las promesas. Aquí hay algunas diferen
     region="unsubscribe">
   </code-example>
 
-* Las promesas no son cancelables.
+* Promises are not cancellable.
 
-### Manejo de errores
+### Error handling
 
-* Los errores de ejecución en observables se entregan al controlador de errores del suscriptor, y el suscriptor cancela automáticamente la suscripción del observable.
+* Observable execution errors are delivered to the subscriber's error handler, and the subscriber automatically unsubscribes from the observable.
 
   <code-example 
     path="comparing-observables/src/observables.ts" 
@@ -74,7 +75,7 @@ Los observables a menudo se comparan con las promesas. Aquí hay algunas diferen
     region="error">
   </code-example>
 
-* Las promesas empujan los errores a las promesas hijas.
+* Promises push errors to the child promises.
 
   <code-example 
     path="comparing-observables/src/promises.ts" 
@@ -82,9 +83,9 @@ Los observables a menudo se comparan con las promesas. Aquí hay algunas diferen
     region="error">
   </code-example>
 
-### Hoja de trucos
+### Cheat sheet
 
-Los siguientes fragmentos de código ilustran cómo se define el mismo tipo de operación utilizando observables y promesas.
+The following code snippets illustrate how the same kind of operation is defined using observables and promises.
 
 <table>
   <thead>
@@ -138,13 +139,13 @@ promise.then((value) => {
   </tbody>
 </table>
 
-## Observables en comparación con eventos API
+## Observables compared to events API
 
-Los observables son muy similares a los controladores de eventos que usan la API de eventos. Ambas técnicas definen manejadores de notificaciones y las utilizan para procesar múltiples valores entregados a lo largo del tiempo. Suscribirse a un observable es equivalente a agregar un detector de eventos. Una diferencia significativa es que puedes configurar un observable para transformar un evento antes de pasar el evento al controlador.
+Observables are very similar to event handlers that use the events API. Both techniques define notification handlers, and use them to process multiple values delivered over time. Subscribing to an observable is equivalent to adding an event listener. One significant difference is that you can configure an observable to transform an event before passing the event to the handler.
 
-El uso de observables para manejar eventos y operaciones asíncronas puede tener la ventaja de una mayor coherencia en contextos como las solicitudes HTTP.
+Using observables to handle events and asynchronous operations can have the advantage of greater consistency in contexts such as HTTP requests.
 
-Aquí hay algunos ejemplos de código que ilustran cómo se define el mismo tipo de operación usando observables y la API de eventos.
+Here are some code samples that illustrate how the same kind of operation is defined using observables and the events API.
 
 <table>
   <tr>
@@ -204,9 +205,9 @@ button.removeEventListener(‘click’, handler);
 </table>
 
 
-## Observables en comparación con arrays
+## Observables compared to arrays
 
-Un observable produce valores a lo largo del tiempo. Se crea un array como un conjunto estático de valores. En cierto sentido, los observables son asíncronos mientras que los arrays son síncronos. En los siguientes ejemplos, ➞ implica entrega de valor asíncrono.
+An observable produces values over time. An array is created as a static set of values. In a sense, observables are asynchronous where arrays are synchronous. In the following examples, ➞ implies asynchronous value delivery.
 
 <table>
   <tr>
