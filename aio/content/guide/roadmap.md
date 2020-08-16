@@ -18,9 +18,9 @@ Estamos trabajando para agregar soporte para TypeScript 4.0 antes de su versión
 
 Para garantizar que proporcionamos una estrategia de prueba de e2e preparada para el futuro, queremos evaluar el estado de Protractor, las innovaciones de la comunidad, las mejores prácticas de e2e y explorar nuevas oportunidades.
 
-### Las librerías de Angular usar Ivy
+### Las biblioteca de Angular usar Ivy
 
-Estamos invirtiendo en el diseño y desarrollo del plan de distribución de la librería Ivy, que incluirá una actualización del formato del paquete de la librería para usar la compilación de Ivy, desbloquear la obsolescencia del formato de la librería View Engine y [ngcc](guide/glossary#ngcc).
+Estamos invirtiendo en el diseño y desarrollo del plan de distribución de la biblioteca Ivy, que incluirá una actualización del formato del paquete de la biblioteca para usar la compilación de Ivy, desbloquear la obsolescencia del formato de la biblioteca View Engine y [ngcc](guide/glossary#ngcc).
 
 ### Evaluar los cambios futuros de RxJS (v7 y posteriores)
 
@@ -40,7 +40,7 @@ En colaboración con el equipo de seguridad de Google, estamos agregando soporte
 
 ### Integrar [MDC Web](https://material.io/develop/web/) en Angular Material
 
-MDC Web es una librería creada por el equipo de Material Design de Google que proporciona primitivas reutilizables para construir componentes de Material Design. El equipo de Angular está incorporando estas primitivas en Angular Material. El uso de MDC Web alineará Angular Material más estrechamente con la especificación de Material Design, expandirá la accesibilidad, mejorará en general la calidad de los componentes y mejorará la velocidad de nuestro equipo.
+MDC Web es una biblioteca creada por el equipo de Material Design de Google que proporciona primitivas reutilizables para construir componentes de Material Design. El equipo de Angular está incorporando estas primitivas en Angular Material. El uso de MDC Web alineará Angular Material más estrechamente con la especificación de Material Design, expandirá la accesibilidad, mejorará en general la calidad de los componentes y mejorará la velocidad de nuestro equipo.
 
 ### Ofrecer a los ingenieros de Google una mejor integración con Angular y la pila de servidores internos de Google
 
