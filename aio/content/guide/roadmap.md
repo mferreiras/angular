@@ -70,7 +70,7 @@ Queremos unificar los requisitos y la conformidad de los commit messages en los 
 
 ### Zone.js opcional
 
-Vamos a diseñar e implementar un plan para que Zone.js sea opcional desde las aplicaciones Angular. De esta forma, simplificaremos el marco, mejoraremos la depuración y reduciremos el tamaño del paquete de aplicaciones. Además, esto nos permitirá aprovechar la sintaxis nativa async/await, que actualmente Zone.js no admite.
+Vamos a diseñar e implementar un plan para que Zone.js sea opcional desde las aplicaciones Angular. De esta forma, simplificaremos el framework, mejoraremos la depuración y reduciremos el tamaño del paquete de aplicaciones. Además, esto nos permitirá aprovechar la sintaxis nativa async/await, que actualmente Zone.js no admite.
 
 ### Eliminar legacy [View Engine](guide/ivy)
 
