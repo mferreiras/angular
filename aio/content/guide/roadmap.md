@@ -82,7 +82,7 @@ Trabajaremos en herramientas de desarrollo para Angular que proporcionarán util
 
 ### NgModules opcionales
 
-Para simplificar el modelo mental angular y el viaje de aprendizaje, trabajaremos para hacer que NgModules sea opcional. Este trabajo permitirá a los desarrolladores desarrollar componentes independientes e implementar una API alternativa para declarar el alcance de compilación del componente.
+Para simplificar el modelo mental Angular y la ruta de aprendizaje, trabajaremos para hacer que NgModules sea opcional. Este trabajo permitirá a los desarrolladores desarrollar componentes independientes e implementar una API alternativa para declarar el alcance de compilación del componente.
 
 ### API de división de código a nivel de componente ergonómico
 
