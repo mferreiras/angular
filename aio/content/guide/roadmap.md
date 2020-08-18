@@ -28,7 +28,7 @@ Queremos asegurarnos de que los desarrolladores Angular aprovechen las últimas 
 
 ### El servicio de lenguaje Angular usa Ivy
 
-Hoy en día, el servicio de idiomas todavía utiliza el compilador de View Engine y la verificación de tipos, incluso para aplicaciones Ivy. Queremos utilizar el analizador de plantillas Ivy y la verificación de tipos mejorada para que el servicio Angular Language coincida con el comportamiento de la aplicación. Esta migración también será un paso hacia el desbloqueo de la eliminación de View Engine, que simplificará Angular, reducirá el tamaño del paquete npm y mejorará la capacidad de mantenimiento del marco.
+Hoy en día, el servicio de lenguaje todavía utiliza el compilador de View Engine y la verificación de tipos, incluso para aplicaciones Ivy. Queremos utilizar el analizador de plantillas Ivy y la verificación de tipos mejorada para que el servicio Angular Language coincida con el comportamiento de la aplicación. Esta migración también será un paso hacia el desbloqueo de la eliminación de View Engine, que simplificará Angular, reducirá el tamaño del paquete npm y mejorará la capacidad de mantenimiento del marco.
 
 ### Ampliar las buenas prácticas en componentes harnesses
 
