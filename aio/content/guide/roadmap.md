@@ -74,7 +74,7 @@ Vamos a diseñar e implementar un plan para que Zone.js sea opcional desde las a
 
 ### Eliminar legacy [View Engine](guide/ivy)
 
-Una vez que se haya completado la transición de todas nuestras herramientas internas a Ivy, queremos eliminar el  legacy View Engine para una sobrecarga conceptual angular más pequeña, un tamaño de paquete más pequeño, un costo de mantenimiento más bajo y una menor complejidad del código base.
+Una vez que se haya completado la transición de todas nuestras herramientas internas a Ivy, queremos eliminar el  legacy View Engine para una sobrecarga conceptual Angular más pequeña, un tamaño de paquete más pequeño, un costo de mantenimiento más bajo y una menor complejidad del código base.
 
 ### Herramientas de desarrollo Angular
 
