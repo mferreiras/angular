@@ -1,4 +1,4 @@
-# Hoja de ruta angular
+# Hoja de ruta Angular
 
 Angular recibe una gran cantidad de solicitudes de funciones, tanto desde dentro de Google como desde la comunidad de código abierto en general. Al mismo tiempo, nuestra lista de proyectos contiene muchas tareas de mantenimiento, refactorizaciones de código, posibles mejoras de rendimiento, etc. Reunimos a representantes de relaciones con desarrolladores, gestión de productos e ingeniería para priorizar esta lista. A medida que nuevos proyectos entran en la cola, los posicionamos regularmente en función de la prioridad relativa a otros proyectos. A medida que se realiza el trabajo, los proyectos avanzarán en la cola.
 
