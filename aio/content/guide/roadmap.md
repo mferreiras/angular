@@ -8,7 +8,7 @@ Los proyectos a continuación no están asociados con una versión de Angular en
 
 ### Operación Bye Bye Backlog (también conocida como Operación Byelog)
 
-Estamos invirtiendo activamente hasta el 50% de nuestra capacidad de ingeniería en problemas de clasificación y relaciones públicas hasta que tengamos una comprensión clara de las necesidades de la comunidad en general. Después de eso, comprometeremos hasta el 20% de nuestra capacidad de ingeniería para mantenernos al día con los nuevos envíos rápidamente.
+Estamos invirtiendo activamente hasta el 50% de nuestra capacidad de ingeniería para clasificación de _issues_ y PRs hasta que tengamos una comprensión clara de las necesidades de la comunidad en general. Después de eso, comprometeremos hasta el 20% de nuestra capacidad de ingeniería para mantenernos al día con los nuevos envíos de _issues_ y PRs rápidamente.
 
 ### Soporte a TypeScript 4.0
 
