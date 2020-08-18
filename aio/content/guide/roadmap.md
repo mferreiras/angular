@@ -54,7 +54,7 @@ Queremos consolidar las herramientas de administración de versiones entre los m
 
 ### Actualizar la documentación introductoria
 
-Redefiniremos los viajes de aprendizaje del usuario y actualizaremos la documentación introductoria. Expresaremos claramente los beneficios de Angular, cómo explorar sus capacidades y brindaremos orientación para que los desarrolladores puedan dominar el marco en el menor tiempo posible.
+Redefiniremos las rutas de aprendizaje del usuario y actualizaremos la documentación introductoria. Expresaremos claramente los beneficios de Angular, cómo explorar sus capacidades y brindaremos orientación para que los desarrolladores puedan dominar el framework en el menor tiempo posible.
 
 ### Tipos de datos estrictos para `@angular/forms`
 
