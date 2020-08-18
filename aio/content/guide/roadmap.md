@@ -18,7 +18,7 @@ Estamos trabajando para agregar soporte para TypeScript 4.0 antes de su versión
 
 Para garantizar que proporcionamos una estrategia de prueba de e2e preparada para el futuro, queremos evaluar el estado de Protractor, las innovaciones de la comunidad, las mejores prácticas de e2e y explorar nuevas oportunidades.
 
-### Las biblioteca de Angular usar Ivy
+### Las bibliotecas de Angular usan Ivy
 
 Estamos invirtiendo en el diseño y desarrollo del plan de distribución de la biblioteca Ivy, que incluirá una actualización del formato del paquete de la biblioteca para usar la compilación de Ivy, desbloquear la obsolescencia del formato de la biblioteca View Engine y [ngcc](guide/glossary#ngcc).
 
