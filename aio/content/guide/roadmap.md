@@ -58,7 +58,7 @@ Redefiniremos los viajes de aprendizaje del usuario y actualizaremos la document
 
 ### Tipos de datos estrictos para `@angular/forms`
 
-Trabajaremos en la implementación de una verificación de tipo más estricta para las formas reactivas. De esta manera, permitiremos a los desarrolladores detectar más problemas durante el tiempo de desarrollo, habilitar un mejor editor de texto y soporte IDE, y mejorar la verificación de tipos para formularios reactivos.
+Trabajaremos en la implementación de una verificación de tipo más estricta para los formularios reactivos. De esta manera, permitiremos a los desarrolladores detectar más problemas durante el tiempo de desarrollo, habilitar un mejor editor de texto y soporte IDE, y mejorar la verificación de tipos para formularios reactivos.
 
 ### webpack 5 en Angular CLI
 
