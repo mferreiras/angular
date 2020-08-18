@@ -26,7 +26,7 @@ Estamos invirtiendo en el diseño y desarrollo del plan de distribución de la b
 
 Queremos asegurarnos de que los desarrolladores Angular aprovechen las últimas capacidades de RxJS y tengan una transición sin problemas a las próximas versiones principales del framework. Para este propósito, exploraremos y documentaremos el alcance de los cambios en la versión 7 y posteriores de RxJS y planificaremos una estrategia de actualización.
 
-### El servicio de lenguaje Angular usar Ivy
+### El servicio de lenguaje Angular usa Ivy
 
 Hoy en día, el servicio de idiomas todavía utiliza el compilador de View Engine y la verificación de tipos, incluso para aplicaciones Ivy. Queremos utilizar el analizador de plantillas Ivy y la verificación de tipos mejorada para que el servicio Angular Language coincida con el comportamiento de la aplicación. Esta migración también será un paso hacia el desbloqueo de la eliminación de View Engine, que simplificará Angular, reducirá el tamaño del paquete npm y mejorará la capacidad de mantenimiento del marco.
 
