@@ -44,7 +44,7 @@ MDC Web es una biblioteca creada por el equipo de Material Design de Google que 
 
 ### Ofrecer a los ingenieros de Google una mejor integración con Angular y la pila de servidores internos de Google
 
-Este es un proyecto interno para agregar soporte para interfaces angulares a la pila de servidores integrados internos de Google.
+Este es un proyecto interno para agregar soporte para interfaces Angular a la pila de servidores integrados internos de Google.
 
 ### Control de versiones y ramificación Angular
 
