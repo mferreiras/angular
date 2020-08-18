@@ -24,7 +24,7 @@ Estamos invirtiendo en el diseño y desarrollo del plan de distribución de la b
 
 ### Evaluar los cambios futuros de RxJS (v7 y posteriores)
 
-Queremos asegurarnos de que los desarrolladores de Angular aprovechen las últimas capacidades de RxJS y tengan una transición sin problemas a las próximas versiones principales del marco. Para este propósito, exploraremos y documentaremos el alcance de los cambios en la versión 7 y posteriores de RxJS y planificaremos una estrategia de actualización.
+Queremos asegurarnos de que los desarrolladores Angular aprovechen las últimas capacidades de RxJS y tengan una transición sin problemas a las próximas versiones principales del framework. Para este propósito, exploraremos y documentaremos el alcance de los cambios en la versión 7 y posteriores de RxJS y planificaremos una estrategia de actualización.
 
 ### El servicio de lenguaje Angular usar Ivy
 
