@@ -64,7 +64,7 @@ Trabajaremos en la implementación de una verificación de tipo más estricta pa
 
 Webpack 5 trae muchas mejoras en la velocidad de compilación y el tamaño del paquete. Para que estén disponibles para los desarrolladores de Angular, invertiremos en migrar la CLI de Angular del uso de API de paquetes web obsoletos y eliminados.
 
-### Estandarización del Commit message
+### Estandarización del mensaje del commit
 
 Queremos unificar los requisitos y la conformidad de los commit messages en los repositorios Angular ([angular/angular](https://github.com/angular/angular), [angular/components](https://github.com/angular/components), [angular/angular-cli](https://github.com/angular/angular-cli)) ara brindar coherencia a nuestro proceso de desarrollo y reutilizar las herramientas de infraestructura.
 
