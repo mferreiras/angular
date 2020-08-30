@@ -20,16 +20,16 @@ Los observables a menudo se comparan con las promesas. Aquí hay algunas diferen
 
 * Los observables no se ejecutan hasta que un consumidor se suscribe. El `subscribe()` ejecuta el comportamiento definido una vez, y se puede volver a llamar. Cada suscripción tiene su propia computación. La resuscripción provoca la recomputación de los valores.
 
-  <code-example 
-    path="comparing-observables/src/observables.ts" 
-    header="src/observables.ts (observable)" 
+  <code-example
+    path="comparing-observables/src/observables.ts"
+    header="src/observables.ts (observable)"
     region="observable">
   </code-example>
 
 * Las promesas se ejecutan de inmediato, y solo una vez. La computación del resultado se inicia cuando se crea la promesa. No hay forma de reiniciar el trabajo. Todas las cláusulas `then` (suscripciones) comparten la misma computación.
 
-  <code-example 
-    path="comparing-observables/src/promises.ts" 
+  <code-example
+    path="comparing-observables/src/promises.ts"
     header="src/promises.ts (promise)"
     region="promise">
   </code-example>
@@ -38,17 +38,17 @@ Los observables a menudo se comparan con las promesas. Aquí hay algunas diferen
 
 * Los observables diferencian entre la función de transformación, como `map` y `subscription`. Solo la suscripción activa la función de suscriptor para comenzar a calcular los valores.
 
-  <code-example 
-    path="comparing-observables/src/observables.ts" 
-    header="src/observables.ts (chain)" 
+  <code-example
+    path="comparing-observables/src/observables.ts"
+    header="src/observables.ts (chain)"
     region="chain">
   </code-example>
 
 * Las promesas no diferencian entre las últimas cláusulas `.then` (equivalentes al subscription) y las cláusulas intermedias `.then` (equivalentes al map).
 
-  <code-example 
+  <code-example
     path="comparing-observables/src/promises.ts"
-    header="src/promises.ts (chain)" 
+    header="src/promises.ts (chain)"
     region="chain">
   </code-example>
 
@@ -56,9 +56,9 @@ Los observables a menudo se comparan con las promesas. Aquí hay algunas diferen
 
 * Las suscripciones de los observables son cancelables. La cancelación de la suscripción evita que el oyente reciba más valores y notifica a la función del suscriptor que cancele el trabajo.
 
-  <code-example 
-    path="comparing-observables/src/observables.ts" 
-    header="src/observables.ts (unsubcribe)" 
+  <code-example
+    path="comparing-observables/src/observables.ts"
+    header="src/observables.ts (unsubcribe)"
     region="unsubscribe">
   </code-example>
 
@@ -68,16 +68,16 @@ Los observables a menudo se comparan con las promesas. Aquí hay algunas diferen
 
 * Los errores de ejecución en observables se entregan al controlador de errores del suscriptor, y el suscriptor cancela automáticamente la suscripción del observable.
 
-  <code-example 
-    path="comparing-observables/src/observables.ts" 
+  <code-example
+    path="comparing-observables/src/observables.ts"
     header="src/observables.ts (error)"
     region="error">
   </code-example>
 
 * Las promesas empujan los errores a las promesas hijas.
 
-  <code-example 
-    path="comparing-observables/src/promises.ts" 
+  <code-example
+    path="comparing-observables/src/promises.ts"
     header="src/promises.ts (error)"
     region="error">
   </code-example>
@@ -156,9 +156,9 @@ Aquí hay algunos ejemplos de código que ilustran cómo se define el mismo tipo
     <td>Creation & cancellation</td>
     <td>
 <pre>// Setup
-let clicks$ = fromEvent(buttonEl, ‘click’);
+const clicks$ = fromEvent(buttonEl, ‘click’);
 // Begin listening
-let subscription = clicks$
+const subscription = clicks$
   .subscribe(e => console.log(‘Clicked’, e))
 // Stop listening
 subscription.unsubscribe();</pre>
