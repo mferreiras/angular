@@ -1,6 +1,6 @@
-# El bootstraping de la aplicación con un módulo de raíz
+# Lanzando tu aplicación con un módulo raíz
 
-#### Requisitos previos
+#### Pre-requisitos
 
 Una comprensión básica de lo siguiente:
 * [JavaScript Modules vs. NgModules](guide/ngmodule-vs-jsmodule).
@@ -9,7 +9,7 @@ Una comprensión básica de lo siguiente:
 
 Un NgModule describe cómo encajan las partes de la aplicación.
 Cada aplicación tiene al menos un módulo Angular, el módulo _root_,
-que debe estar presente para arrancar la aplicación en el bootstraping.
+que debe estar presente para arrancar la aplicación en el lanzado inicial.
 Por convención y por defecto, este NgModule se llama `AppModule`.
 
 Cuando se usa el comando de [Angular CLI](cli) `ng new` para generar una aplicación, el `AppModule` predeterminado es el siguiente.
@@ -49,7 +49,7 @@ El decorador `@NgModule` identifica `AppModule` como una clase `NgModule`.
 * **_declarations_**&mdash; el único componente de esta aplicación..
 * **_imports_**&mdash; importar `BrowserModule` para tener servicios específicos del navegador como renderizado DOM, sanitization y ubicación.
 * **_providers_**&mdash; los proveedores de servicios.
-* **_bootstrap_**&mdash; el componente _root_ que Angular crea e inserta
+* **_bootstrap_**&mdash; el componente raíz que Angular crea e inserta
 en la página web de host `index.html`.
 
 La aplicación predeterminada creada por Angular CLI solo tiene un componente, `AppComponent`, por lo que
