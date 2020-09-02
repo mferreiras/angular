@@ -96,7 +96,7 @@ importa el módulo que tiene el declarable que necesites.
 
 ### Usando directivas con `@NgModule`
 
-Usar el array de `declarations` para las directivas.
+Usa el array de `declarations` para las directivas.
 Para usar una directiva, un componente o un pipe en un módulo, hay que hacer algunas cosas:
 
 1. Exportarlo desde el archivo donde se escribió.
