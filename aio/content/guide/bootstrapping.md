@@ -9,7 +9,7 @@ Una comprensión básica de lo siguiente:
 
 Un NgModule describe cómo encajan las partes de la aplicación.
 Cada aplicación tiene al menos un módulo Angular, el módulo _root_,
-que debe estar presente para arrancar la aplicación en el lanzado inicial.
+que debe estar presente para arrancar la aplicación en el lanzamiento inicial.
 Por convención y por defecto, este NgModule se llama `AppModule`.
 
 Cuando se usa el comando de [Angular CLI](cli) `ng new` para generar una aplicación, el `AppModule` predeterminado es el siguiente.
@@ -58,26 +58,26 @@ está en los arrays de `declarations` y `bootstrap`.
 {@a the-declarations-array}
 {@a declarations}
 
-## El array de `declarations`
+## El array `declarations`
 
 El array de `declarations` le dice a Angular qué componentes pertenecen a ese módulo.
-A medida que crea más componentes, agrégalos a las `declarations`.
+A medida que crees más componentes, agrégalos a las `declarations`.
 
 Debe declarar cada componente en exactamente una clase `NgModule`.
 Si se usa un componente sin declararlo, Angular devuelve un
 mensaje de error.
 
-El array de `declarations` solo acepta declarables. Declarables
-son componentes, [directivas](guide/attribute-directives) y [pipes](guide/pipes).
+El array `declarations` solo acepta declarables. Declarables pueden ser
+componentes, [directivas](guide/attribute-directives) y [pipes](guide/pipes).
 Todos los declarables de un módulo deben estar en el array de `declarations`.
 Los declarables deben pertenecer exactamente a un módulo. El compilador emite
 un error si se intenta declarar la misma clase en más de un módulo.
 
 Estas clases declaradas son visibles dentro del módulo pero invisibles
 a componentes en un módulo diferente, a menos que se exporten desde
-este módulo y el otro módulo importan este.
+éste módulo y el otro módulo importe éste mismo módulo.
 
-A continuación, se muestra un ejemplo de un array de `declarations`:
+A continuación, se muestra un ejemplo de un array `declarations`:
 
 ```typescript
   declarations: [
@@ -91,12 +91,12 @@ Un declarable solo puede pertenecer a un módulo, por lo que solo debe ser decla
 un `@NgModule`. Cuando se necesite en otro lugar,
 importa el módulo que tiene el declarable que necesites.
 
-**Solo las referencias de `@NgModule`** van en el array de `imports`.
+**Solo las referencias de `@NgModule`** van en el array `imports`.
 
 
 ### Usando directivas con `@NgModule`
 
-Usa el array de `declarations` para las directivas.
+Usa el array `declarations` para las directivas.
 Para usar una directiva, un componente o un pipe en un módulo, hay que hacer algunas cosas:
 
 1. Exportarlo desde el archivo donde se escribió.
@@ -114,7 +114,7 @@ en el `NgModule`, en este ejemplo, `app.module.ts` con una declaración de impor
 
 <code-example path="bootstrapping/src/app/app.module.ts" region="directive-import" header="src/app/app.module.ts"></code-example>
 
-Y en el mismo archivo, agregarlo al array de `declarations` del `@ NgModule`:
+Y en el mismo archivo, agregarlo al array `declarations` del `@ NgModule`:
 
 <code-example path="bootstrapping/src/app/app.module.ts" region="declarations" header="src/app/app.module.ts"></code-example>
 
@@ -141,18 +141,18 @@ la clase se importó de otro módulo.
 
 {@a bootstrap-array}
 
-## El array de `providers`
+## El array `providers`
 
-El array de `providers` es donde se enumeran los servicios que necesita la aplicación. Cuando
+El array `providers` es donde se enumeran los servicios que necesita la aplicación. Cuando
 enumera los servicios, están disponibles en toda la aplicación. Puedes reducir el scope
 al usar módulos de funciones y carga diferida. Para más información, ver
 [Proveedores](guide/providers).
 
-## El array de `bootstrap`
+## El array `bootstrap`
 
 La aplicación se inicia haciendo bootstraping desde la raíz `AppModule`, que es
 también conocido como `entryComponent`.
-Entre otras cosas, el proceso de bootstrapping crea los componentes enumerados en el array de `bootstrap`
+Entre otras cosas, el proceso de carga crea los componentes enumerados en el array de `bootstrap`
 e inserta cada uno en el DOM del navegador.
 
 Cada componente bootstrap es la base de su propio árbol de componentes.
@@ -163,10 +163,10 @@ Si bien puedes colocar más de un árbol de componentes en una página web de ho
 la mayoría de las aplicaciones tienen solo un árbol de componentes y arrancan un solo componente raíz.
 
 Este componente raíz se suele llamar `AppComponent` y se encuentra en el
-array de `bootstrap` del módulo raíz.
+array `bootstrap` del módulo raíz.
 
 
 ## Más sobre módulos Angular
 
-Para obtener más información sobre NgModules, es probable que veas con frecuencia en las aplicaciones,
+Para obtener más información sobre NgModules que probablemente veas con frecuencia en las aplicaciones,
 consulta [Módulos de uso frecuente](guide/frequent-ngmodules).
