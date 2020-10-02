@@ -8,7 +8,7 @@ El router te permite mostrar los detalles completos del producto en [vistas](gui
 
 * Ingresando una URL en la barra de direcciones para navegar a la vista correspondiente.
 * Haciendo clic en los enlaces de la página para navegar a una nueva vista.
-* Haciendo clic en los botones de adelante y atras del navegador para navegar hacia atrás y hacia adelante a través del historial del navegador.
+* Haciendo clic en los botones de adelante y atrás del navegador para navegar hacia atrás y hacia adelante a través del historial del navegador.
 
 ## Registro de una ruta
 
