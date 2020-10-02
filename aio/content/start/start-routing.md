@@ -59,7 +59,7 @@ El componente de detalles del producto maneja la visualización de cada producto
         <code-example header="src/app/product-details/product-details.component.ts" path="getting-started/src/app/product-details/product-details.component.1.ts" region="imports">
         </code-example>
 
-    1. Define la propiedad `product` e inyecte el` ActivatedRoute` en el constructor agregándolo como un argumento dentro de los paréntesis del constructor.
+    1. Define la propiedad `product` e inyecta el `ActivatedRoute` en el constructor agregándolo como un argumento dentro de los paréntesis del constructor.
     
         <code-example header="src/app/product-details/product-details.component.ts" path="getting-started/src/app/product-details/product-details.component.1.ts" region="props-methods">
         </code-example>
