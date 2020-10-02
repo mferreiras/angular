@@ -4,7 +4,7 @@ Al final de la [parte 1] (start "Empieza con una aplicación Angular básica"), 
 
 Esta guía te muestra cómo usar Angular [Routing](guide/glossary#router "Definición de Router") para brindarle al usuario navegación dentro de la aplicación. En una aplicación de una sola página, en lugar de cargar nuevas páginas, muestras diferentes componentes y datos al usuario en función de dónde se encuentra el usuario en la aplicación.
 
-El Router les permite mostrar los detalles completos del producto en [vistas](guide/glossary#view "Definición de vista") separadas, cada una con su propia URL. El Router habilita la navegación de una vista a la siguiente (dentro de la misma página) cuando los usuarios realizan tareas como las siguientes:
+El router te permite mostrar los detalles completos del producto en [vistas](guide/glossary#view "Definición de vista") separadas, cada una con su propia URL. El router habilita la navegación de una vista a la siguiente (dentro de la misma página) cuando los usuarios realizan tareas como las siguientes:
 
 * Ingresando una URL en la barra de direcciones para navegar a la vista correspondiente.
 * Haciendo clic en los enlaces de la página para navegar a una nueva vista.
