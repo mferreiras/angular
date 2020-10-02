@@ -1,6 +1,6 @@
 # Navegación en la aplicación
 
-Al final de la [parte 1] (start "Empieza con una aplicación Angular básica"), la aplicación de la tienda en linea tiene un catálogo básico de productos. La aplicación no tiene ningun estado de variable o navegación. Hay una URL, y esa URL siempre muestra la pagina "Mi Tienda" con una lista de productos y sus descripciones.
+Al final de la [parte 1] (start "Empieza con una aplicación Angular básica"), la aplicación de la tienda en línea tiene un catálogo básico de productos. La aplicación no tiene ningun estado de variable o navegación. Hay una URL, y esa URL siempre muestra la pagina "Mi Tienda" con una lista de productos y sus descripciones.
 
 Esta guía les muestra cómo usar Angular [Routing](guide/glossary#router "Definición de Router") para brindarle al usuario navegación dentro de la aplicación. En una aplicación single-page (de una sola página), en lugar de cargar nuevas páginas, les muestra diferentes componentes y datos al usuario en función de dónde se encuentra el usuario en la aplicación.
 
