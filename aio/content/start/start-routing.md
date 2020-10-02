@@ -67,7 +67,7 @@ El componente de detalles del producto maneja la visualización de cada producto
         El `ActivatedRoute` es específico para cada componente enrutado que carga el Angular Router. Contiene información sobre la
         ruta, sus parámetros y datos adicionales asociados con la ruta.
 
-        Inyectando el `ActivatedRoute`, estas configurando el componente para usar un *servicio*. La página [Manejo de Datos] (start/start-data "Pruébalo: Manejo de Datos") cubre los servicios con más detalle.
+        Inyectando el `ActivatedRoute`, estás configurando el componente para usar un *servicio*. La página [Manejo de Datos] (start/start-data "Pruébalo: Manejo de Datos") cubre los servicios con más detalle.
      
      
 3. En el método `ngOnInit()`, suscríbete a los parámetros de ruta y obtén el producto basándote en el `productId`.
