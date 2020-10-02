@@ -52,7 +52,7 @@ El componente de detalles del producto maneja la visualización de cada producto
 
 1. Abre `product-details.component.ts`
 
-2. Organice el uso de datos de productos desde un archivo externo.
+2. Organiza el uso de datos de productos desde un archivo externo.
 
     1. Importe `ActivatedRoute` del paquete `@angular/router` y la matriz `products` de `../products`.
     
