@@ -54,7 +54,7 @@ El componente de detalles del producto maneja la visualización de cada producto
 
 2. Organiza el uso de datos de productos desde un archivo externo.
 
-    1. Importe `ActivatedRoute` del paquete `@angular/router` y la matriz `products` de `../products`.
+    1. Importa `ActivatedRoute` del paquete `@angular/router` y la matriz `products` de `../products`.
     
         <code-example header="src/app/product-details/product-details.component.ts" path="getting-started/src/app/product-details/product-details.component.1.ts" region="imports">
         </code-example>
