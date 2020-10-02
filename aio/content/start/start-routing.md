@@ -101,6 +101,6 @@ Para obtener más información sobre el Angular Router, consulta [Enrutamiento y
 * Los productos están vinculados desde la vista de lista de productos a productos individuales.
 * Los usuarios pueden hacer clic en el nombre de un producto de la lista para ver los detalles en una nueva vista, con una URL / ruta distinta.
 
-Para continuar explorando Angular, elija cualquiera de las siguientes opciones:
+Para continuar explorando Angular, elije cualquiera de las siguientes opciones:
 * [Continuar con la sección "Manejo de Datos"] (start/start-data "Pruébalo: Manejo de datos") para agregar una función de carrito de compras, usa un servicio para administrar los datos del carrito y usa HTTP para recuperar datos externos para los precios del envío.
 * [Vaya a la sección Despliegue] (start/start-deployment "Pruébalo: Despliegue") para implementar su aplicación en Firebase o pasar al desarrollo local.
