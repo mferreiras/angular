@@ -1,144 +1,141 @@
-<!-- {@a expression-operators} -->
+<! - {@a expresión-operadores} ->
 
-# Template expression operators
+# Operadores de expresión de plantilla
 
-The Angular template expression language employs a subset of JavaScript syntax supplemented with a few special operators
-for specific scenarios. The next sections cover three of these operators:
+El lenguaje de expresión de plantilla angular emplea un subconjunto de sintaxis de JavaScript complementado con algunos operadores especiales
+para escenarios específicos. Las siguientes secciones cubren tres de estos operadores:
 
-* [pipe](guide/template-expression-operators#pipe)
-* [safe navigation operator](guide/template-expression-operators#safe-navigation-operator)
-* [non-null assertion operator](guide/template-expression-operators#non-null-assertion-operator)
+* [tubería] (guía/plantilla-operadores-de-expresión#tubería)
+* [operador de navegación segura] (guía/plantilla-expresión-operadores#operador-de-navegación-segura)
+* [operador de aserción no nula] (guía/operadores-de-expresión-de-plantilla#operador-de-aserción-no-nula)
 
-<div class="alert is-helpful">
+<div class="la alerta es útil">
 
-See the <live-example></live-example> for a working example containing the code snippets in this guide.
+Consulta el <live-example></live-example> para ver un ejemplo funcional que contiene los fragmentos de código de esta guía.
 
 </div>
 
 {@a pipe}
 
-## The pipe operator (`|`)
+## El operador de tubería (`|`)
 
-The result of an expression might require some transformation before you're ready to use it in a binding.
-For example, you might display a number as a currency, change text to uppercase, or filter a list and sort it.
+El resultado de una expresión puede requerir alguna transformación antes de que esté listo para usarlo en un enlace.
+Por ejemplo, puedes mostrar un número como moneda, cambiar el texto a mayúsculas o filtrar una lista y ordenarla.
 
-Pipes are simple functions that accept an input value and return a transformed value.
-They're easy to apply within template expressions, using the pipe operator (`|`):
+Las tuberías son funciones simples que aceptan un valor de entrada y devuelven un valor transformado.
+Son fáciles de aplicar dentro de las expresiones de plantilla, utilizando el operador de tubería (`|`):
+
+<code-example path="template-expression-operator/src/app/app.component.html" region="uppercase-pipe" header="src/app/app.component.html"> </code-example>
+
+El operador de tubería pasa el resultado de una expresión de la izquierda a una función de tubería de la derecha.
+
+Puedes encadenar expresiones a través de múltiples conductos:
+<code-example ruta="plantilla-expresión-operadores/src/app/app.component.html" region="pipe-chain" header="src/app/app.component.html"> </code-example>
+
+Y también puedes [aplicar parámetros] (guía/tuberías#parametrización-de-una-tubería) a una tubería:
 
 <code-example path="template-expression-operators/src/app/app.component.html" region="uppercase-pipe" header="src/app/app.component.html"></code-example>
 
-The pipe operator passes the result of an expression on the left to a pipe function on the right.
-
-You can chain expressions through multiple pipes:
+La tubería `json` es particularmente útil para depurar enlaces:
 
 <code-example path="template-expression-operators/src/app/app.component.html" region="pipe-chain" header="src/app/app.component.html"></code-example>
 
-And you can also [apply parameters](guide/pipes#parameterizing-a-pipe) to a pipe:
-
-<code-example path="template-expression-operators/src/app/app.component.html" region="date-pipe" header="src/app/app.component.html"></code-example>
-
-The `json` pipe is particularly helpful for debugging bindings:
-
-<code-example path="template-expression-operators/src/app/app.component.html" region="json-pipe" header="src/app/app.component.html"></code-example>
-
-The generated output would look something like this:
+La salida generada se vería así:
 
 <code-example language="json">
-  { "name": "Telephone",
+  { "name": "Teléfono",
     "manufactureDate": "1980-02-25T05:00:00.000Z",
     "price": 98 }
 </code-example>
 
-<div class="alert is-helpful">
+<div class="la alerta es útil">
 
-The pipe operator has a higher precedence than the ternary operator (`?:`),
-which means `a ? b : c | x` is parsed as `a ? b : (c | x)`.
-Nevertheless, for a number of reasons,
-the pipe operator cannot be used without parentheses in the first and second operands of `?:`.
-A good practice is to use parentheses in the third operand too.
+El operador de tubería tiene una precedencia mayor que el operador ternario (`?:`),
+que significa ʻa? b: c | x` se analiza como ʻa? b: (c | x) `.
+Sin embargo, por varias razones,
+el operador de tubería no se puede utilizar sin paréntesis en el primer y segundo operandos de `?:`.
+Una buena práctica es utilizar paréntesis también en el tercer operando.
 
 </div>
 
-
-<hr/>
+<h/>
 
 {@a safe-navigation-operator}
 
-## The safe navigation operator ( `?` ) and null property paths
+## El operador de navegación segura (`?`) Y rutas de propiedad nulas
 
-The Angular safe navigation operator, `?`, guards against `null` and `undefined`
-values in property paths. Here, it protects against a view render failure if `item` is `null`.
+El operador de navegación segura Angular, `?`, Protege contra `null` y `undefined`
+valores en rutas de propiedad. Aquí, protege contra un error de renderizado de la vista si `item` es `null`.
 
-<code-example path="template-expression-operators/src/app/app.component.html" region="safe" header="src/app/app.component.html"></code-example>
+<code-example path="template-expression-operators/src/app/app.component.html" region="json-pipe" header="src/app/app.component.html"></code-example>
 
-If `item` is `null`, the view still renders but the displayed value is blank; you see only "The item name is:" with nothing after it.
+Si `item` es `null`, la vista aún se procesa pero el valor mostrado está en blanco; solo verá "El nombre del elemento es:" sin nada después.
 
-Consider the next example, with a `nullItem`.
+Considera el siguiente ejemplo, con un `nullItem`.
 
 <code-example language="html">
-  The null item name is {{nullItem.name}}
+ El nombre del elemento nulo es {{nullItem.name}}
 </code-example>
 
-Since there is no safe navigation operator and `nullItem` is `null`, JavaScript and Angular would throw a `null` reference error and break the rendering process of Angular:
+Dado que no hay un operador de navegación seguro y `nullItem` es` null`, JavaScript y Angular arrojarían un error de referencia `null` y romperían el proceso de renderizado de Angular:
 
 <code-example language="bash">
-  TypeError: Cannot read property 'name' of null.
+ TypeError: no se puede leer la propiedad 'nombre' de nulo.
 </code-example>
 
-Sometimes however, `null` values in the property
-path may be OK under certain circumstances,
-especially when the value starts out null but the data arrives eventually.
+A veces, sin embargo, los valores "nulos" en la propiedad
+ruta puede estar bien en determinadas circunstancias,
+especialmente cuando el valor comienza siendo nulo pero los datos llegan eventualmente.
 
-With the safe navigation operator, `?`, Angular stops evaluating the expression when it hits the first `null` value and renders the view without errors.
+Con el operador de navegación segura, `?`, Angular deja de evaluar la expresión cuando llega al primer valor `nulo` y muestra la vista sin errores.
 
-It works perfectly with long property paths such as `a?.b?.c?.d`.
+Funciona perfectamente con rutas de propiedad largas como `a? .B? .C? .D`.
 
+<h/>
 
-<hr/>
+{@a operador de aserción no nula}
 
-{@a non-null-assertion-operator}
+## El operador de aserción no nula (`!`)
 
-## The non-null assertion operator ( `!` )
+A partir de TypeScript 2.0, puede hacer cumplir [verificación nula estricta] (http://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-0.html "Verificación nula estricta en TypeScript") con el `Bandera --strictNullChecks`. TypeScript luego asegura que ninguna variable sea involuntariamente "nula" o "indefinida".
 
-As of Typescript 2.0, you can enforce [strict null checking](http://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-0.html "Strict null checking in TypeScript") with the `--strictNullChecks` flag. TypeScript then ensures that no variable is unintentionally `null` or `undefined`.
+En este modo, las variables escritas no permiten "nulo" y "no definido" por defecto. El verificador de tipos arroja un error si dejas una variable sin asignar o intentas asignar "nulo" o "indefinido" a una variable cuyo tipo no permite "nulo" y "indefinido".
 
-In this mode, typed variables disallow `null` and `undefined` by default. The type checker throws an error if you leave a variable unassigned or try to assign `null` or `undefined` to a variable whose type disallows `null` and `undefined`.
+El verificador de tipos también arroja un error si no puede determinar si una variable será "nula" o "indefinida" en tiempo de ejecución. Le dice al verificador de tipos que no arroje un error aplicando el sufijo
+[operador de aserción no nula,!] (http://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-0.html#non-null-assertion-operator "Operador de aserción no nula" ).
 
-The type checker also throws an error if it can't determine whether a variable will be `null` or `undefined` at runtime. You tell the type checker not to throw an error by applying the postfix
-[non-null assertion operator, !](http://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-0.html#non-null-assertion-operator "Non-null assertion operator").
-
-The Angular non-null assertion operator, `!`, serves the same purpose in
-an Angular template. For example, you can assert that `item` properties are also defined.
+El operador de aserción no nula angular, `!`, Tiene el mismo propósito en
+una plantilla angular. Por ejemplo, puede afirmar que las propiedades de `item` también están definidas.
 
 <code-example path="template-expression-operators/src/app/app.component.html" region="non-null" header="src/app/app.component.html"></code-example>
 
-When the Angular compiler turns your template into TypeScript code,
-it prevents TypeScript from reporting that `item.color` might be `null` or `undefined`.
+Cuando el compilador Angular convierte tu plantilla en código TypeScript,
+evita que TypeScript informe que `item.color` podría ser `null` o `undefined`.
 
-Unlike the [_safe navigation operator_](guide/template-expression-operators#safe-navigation-operator "Safe navigation operator (?)"),
-the non-null assertion operator does not guard against `null` or `undefined`.
-Rather, it tells the TypeScript type checker to suspend strict `null` checks for a specific property expression.
+A diferencia del [operador de navegación segura] (guia/plantilla-expresion-operadores#operador-de-navegación-segura "Operador de navegación segura (?)"),
+el operador de aserción no nula no protege contra "nulo" o "indefinido".
+Más bien, le dice al verificador de tipos de TypeScript que suspenda las comprobaciones estrictas "nulas" para una expresión de propiedad específica.
 
-The non-null assertion operator, `!`, is optional with the exception that you must use it when you turn on strict null checks.
+El operador de aserción no nula, `!`, Es opcional con la excepción de que debe usarlo cuando activa las verificaciones nulas estrictas.
 
-{@a any-type-cast-function}
+{@a función de conversión de cualquier tipo}
 
-## The `$any()` type cast function
+## La función de conversión de tipo `$any()`
 
-Sometimes a binding expression triggers a type error during [AOT compilation](guide/aot-compiler) and it is not possible or difficult to fully specify the type.
-To silence the error, you can use the `$any()` cast function to cast
-the expression to the [`any` type](http://www.typescriptlang.org/docs/handbook/basic-types.html#any) as in the following example:
+A veces, una expresión vinculante desencadena un error de tipo durante la [compilación AOT] (guía/compilador aot) y no es posible o difícil especificar completamente el tipo.
+Para silenciar el error, puede usar la función de conversión `$any()` para transmitir
+la expresión al [`cualquier` tipo] (http://www.typescriptlang.org/docs/handbook/basic-types.html#any) como en el siguiente ejemplo:
 
 <code-example path="built-in-template-functions/src/app/app.component.html" region="any-type-cast-function-1" header="src/app/app.component.html"></code-example>
 
-When the Angular compiler turns this template into TypeScript code,
-it prevents TypeScript from reporting that `bestByDate` is not a member of the `item`
-object when it runs type checking on the template.
+Cuando el compilador Angular convierte esta plantilla en código TypeScript,
+evita que TypeScript informe que `bestByDate` no es miembro del `item`
+objeto cuando ejecuta la verificación de tipos en la plantilla.
 
-The `$any()` cast function also works with `this` to allow access to undeclared members of
-the component.
+La función de conversión `$any()` también funciona con `this` para permitir el acceso a miembros no declarados de
+el componente.
 
-<code-example path="built-in-template-functions/src/app/app.component.html" region="any-type-cast-function-2" header="src/app/app.component.html"></code-example>
+<code-example path="built-in-template-functions/src/app/app.component.html" region="any-type-cast-function-2" header="src/app/app.component.html"> </code-example>
 
-The `$any()` cast function works anywhere in a binding expression where a method call is valid.
+La función de conversión `$any()` funciona en cualquier lugar de una expresión de enlace donde una llamada a un método es válida.
 
